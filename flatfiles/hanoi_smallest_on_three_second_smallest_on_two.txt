@@ -51,6 +51,7 @@ fact: (onTopOf nothing disk3)
 fact: (onTopOf disk3 disk4)
 fact: (onTopOf disk4 disk5)
 fact: (onTopOf disk5 base)
+rule: ((onTopOf ?disk1 ?disk2)(inst ?disk1 disk)(inst ?disk2 disk)) -> (larger ?disk2 ?disk1)
 
 rule: ((onTopOf nothing ?disk)(on ?disk ?initial)(isEmpty ?target)) -> (movable ?disk ?initial ?target)
 rule: ((onTopOf nothing ?disk)(on ?disk ?initial)(onTopOf nothing ?disk1)(on ?disk1 ?target)(larger ?disk1 ?disk)) -> (movable ?disk ?initial ?target)

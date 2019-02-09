@@ -48,6 +48,7 @@ fact: (onTopOf disk1 disk2)
 fact: (onTopOf disk3 disk4)
 fact: (onTopOf disk4 disk5)
 fact: (onTopOf disk5 base)
+rule: ((onTopOf ?disk1 ?disk2)(inst ?disk1 disk)(inst ?disk2 disk)) -> (larger ?disk2 ?disk1)
 
 fact: (isEmpty peg2)
 
